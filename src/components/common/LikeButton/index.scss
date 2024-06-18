@@ -1,0 +1,135 @@
+@import "../../../GeneralTheme.scss";
+
+.like-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: $first;
+    padding: 10px;
+    cursor: pointer;
+
+    .like-count{
+        margin: 1%;
+    }
+    .hr-line {
+        margin-top: -2%;
+        hr {
+            border: 1px solid $third;
+        }
+    }
+
+    .like-comment-common {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .purple {
+        color: $first;
+    }
+
+    .black {
+        color: $first;
+    }
+
+    .likes-comment-inner {
+        display: flex;
+        align-items: center;
+        color: $first;
+
+        svg {
+            margin-right: 5px;
+        }
+
+        p {
+            font-weight: 600;
+        }
+    }
+
+    .comment-input {
+        width: 99.5%;
+        height: 27px;
+        background-color: $second;
+        
+        border-radius: 30px;
+        // padding-left: 20px;
+        color: $font-color1;
+        font-size: 16px;
+        margin-top: 10px;
+        // border: 3px solid transparent;
+        outline: none;
+        &:focus {
+            outline: none;
+            border: $third 2px solid;
+            // animation: blinkBorder 1s infinite alternate;
+        }
+    }
+
+    .comment-btn {
+        margin-top: 10px;
+        width: 20%;
+        padding: 10px 20px;
+        border-radius: 25px;
+        color: #fff;
+        font-size: 16px;
+        background-color: $third;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: darken($third, 15%);
+        }
+    }
+
+    .comment-preview {
+        background-color: $second;
+        border-radius: 10px;
+        color: $font-color1;
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        .comment-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .comment-name {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .dot {
+            margin: 0 5px;
+        }
+
+        .comment-timestamp {
+            margin-left: 5px;
+            font-size: 12px;
+            color: $font-color2;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .comment-text {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .comment-btn {
+            width: 40%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .comment-btn {
+            width: 60%;
+        }
+    }
+}

@@ -1,0 +1,194 @@
+@import "../GeneralTheme.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $second;
+}
+
+.login-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Helvetica;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: $first;
+    text-align: center; 
+    border-radius: 5px;
+    .login-wrapper-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading {
+        color: white;
+        font-weight: 200;
+        font-size: 30px;
+    }
+    .sub-heading {
+        color: white;
+        font-weight: 200;
+        font-size: 20px;
+        margin-top: -20px;
+    }
+}
+
+.auth-input {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .common-input {
+        color: $font-color1;
+        width: 100%;
+        padding: 10px;
+        margin: 2% 0;
+        border: 3px solid transparent;
+        border-radius: 5px;
+        background-color: $second;
+        font-size: 1em;
+        &:focus, &:hover {
+            outline: none;
+            border: 3px solid $third;
+            // animation: blinkBorder 1s infinite alternate;
+        }
+        
+    }
+    .common-input {
+        width: 80%;
+    }
+}
+
+@keyframes blinkBorder {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: $third;
+    }
+}
+
+.login-btn {
+    width: 50%;
+    // align-items: center;
+    margin: 3%;
+    background-color: $third;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 2%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($third, 15%);
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 6px 12px;
+    }
+    // display: inline-block;
+    // padding: 0.25em 0.75em;
+    // border-radius: 5em;
+    // color: #fff;
+    // font-size: 1em;
+    // letter-spacing: 0.15em;
+    // transition: all 0.3s;
+    // position: relative;
+    // overflow: hidden;
+    // z-index: 1;
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: $third;
+    //     border-radius: 10em;
+    //     z-index: -2;
+    // }
+    // &:before {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 0%;
+    //     height: 100%;
+    //     background-color: darken($third, 15%);
+    //     transition: all 0.3s;
+    //     border-radius: 10em;
+    //     z-index: -1;
+    // }
+    // &:hover {
+    //     color: #fff;
+    //     &:before {
+    //         width: 100%;
+    //     }
+    // }
+}
+
+.google-btn-container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .google-btn {
+        width: 80% !important;
+    }
+    .signup-link {
+        margin-top: 5%;
+        font-size: 80%;
+    }
+    .register {
+        color: $third;
+        font-family: system-ui;
+        cursor: pointer;
+    }
+}
+
+.hr-text {
+    margin: 5% 0;
+    text-align: center;
+    color: $second;
+    &:before {
+        background: linear-gradient(
+            to right,
+            transparent,
+            #818078,
+            transparent
+        );
+    }
+    &:after {
+        color: white;
+        background-color: transparent;
+    }
+}
+
+.connectLogo {
+    width: 50%;
+}
+
+.forgot-password-btn {
+    margin: 3% 0;
+    background-color: $second;
+    color: $third;
+    border: none;
+    padding: auto;
+    cursor: pointer;
+    font-weight: 550;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($third, 15%);
+    }
+}

@@ -1,0 +1,44 @@
+@import url("./components/common/Loader/index.scss");
+@import "./GeneralTheme.scss";
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: white;
+    /* bg color */
+    background-color: $second;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.common-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: $forth;
+    color: $font-color1;
+    font-size: 1em;
+    &:focus {
+        outline: none;
+        // animation: blinkBorder 1s infinite alternate;
+        border-color: $third;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .common-input {
+        width: calc(100% - 20px);
+    }
+}

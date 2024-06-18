@@ -1,0 +1,49 @@
+.searched-user {
+    display: flex;
+    align-items: center;
+    border: 2px solid $fifth;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+
+    .user-details {
+        flex: 1;
+
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .headline {
+            font-size: 16px;
+            color: #666;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .searched-user {
+        flex-direction: column;
+        align-items: flex-start;
+
+        img {
+            margin-bottom: 15px;
+        }
+    }
+}

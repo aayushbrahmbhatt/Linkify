@@ -1,0 +1,34 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches: [ Deploy ]  # Update branch names as needed
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest  # Replace with your preferred runner OS
+    steps:
+      - uses: actions/checkout@v3  # Checkout your code from the repository
+
+      - name: Use Node.js 16  # Adjust the Node.js version if needed
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install  # Or yarn install if using yarn
+
+      - name: Build for production
+        run: npm run build  # Or yarn build if using yarn
+
+      - name: Deploy to Firebase Hosting
+        uses: google/firebase-tools@v11  # Action to deploy to Firebase
+        with:
+          project_id: ${{ secrets.FIREBASE_PROJECT_ID }}  # Replace with your project ID
+          api_key: ${{ secrets.FIREBASE_API_KEY }}     # Replace with your API key
+          auth_email: ${{ secrets.FIREBASE_AUTH_EMAIL }} # Replace with your service account email
+          auth_private_key: ${{ secrets.FIREBASE_AUTH_PRIVATE_KEY }} # Replace with your service account private key (base64 encoded)
+
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}  # Replace with your Firebase deployment token (optional)
+

@@ -1,0 +1,30 @@
+/* MessagesLayout.scss */
+
+.messages-layout {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Adjust the width of the components */
+.MessengersComponent {
+    flex: 1; /* Take up available space */
+    margin-right: 20px; /* Add some space between MessengersComponent and MessagesComponent */
+}
+
+.MessagesComponent {
+    flex: 2; /* Take up more space */
+}
+
+@media (max-width: 768px) {
+    .messages-layout {
+        flex-direction: column; /* Stack components vertically on small screens */
+    }
+
+    .MessengersComponent,
+    .MessagesComponent {
+        width: 100%; /* Occupy full width on small screens */
+        margin-right: 0; /* Remove margin on small screens */
+    }
+}

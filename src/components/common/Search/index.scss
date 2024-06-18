@@ -1,0 +1,44 @@
+@import "../../../GeneralTheme.scss";
+
+.search-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-left: 8%;
+    margin-right: 25%;
+    input {
+        font: Helvetica;
+        font-size: 15px;
+        width: 100%;
+        height: 40px;
+        background-color: whitesmoke;
+        border: 3px solid transparent;
+        border-radius: 20px;
+        color: #212121;
+        padding: 0 15px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    input:focus, 
+    input:hover{
+        border: $third 3px solid;
+        // animation: blinkBorder 1s infinite alternate;
+    }
+    ::placeholder {
+        font: Helvetica;
+        font-size: 15px;
+    }
+
+    .close-icon {
+        margin-left: -30px;
+        color: $third;
+        cursor: pointer;
+    }
+    .close-icon:hover {
+        color: darken($third, 25%);
+    }
+}
