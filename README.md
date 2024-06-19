@@ -47,7 +47,7 @@ This Project aims to establish a robust professional networking site that facili
 ## Deployment
 
 Website Link
-- [Link]()
+- [Link](https://linkify-5fe79.web.app/)
 
 ## Author
 
