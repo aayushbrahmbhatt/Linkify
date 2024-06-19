@@ -67,7 +67,7 @@ export default function LoginComponent() {
 
             <div className="login-wrapper-inner">
                 <h1 className="heading">Log In</h1>
-                <p className="sub-heading">Welcome to Connect</p>
+                <p className="sub-heading">Welcome to Linkify</p>
 
                 <div className="auth-input">
                     <Input
