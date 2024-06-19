@@ -1,6 +1,6 @@
 
 ## 🚀 Project Overview
-Welcome to my ongoing individual project. This project is aimed at building an innovative professional networking platform **Linkify**.
+Welcome to my ongoing group project. This project is aimed at building an innovative professional networking platform **Linkify**.
 
 # Linkify
 
@@ -52,3 +52,4 @@ Website Link
 ## Author
 
 - [@Aayush Brahmbhatt](https://www.github.com/aayushbrahmbhatt)
+- [@Zeel Bhanderi](https://www.github.com/08-zeel)
